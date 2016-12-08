@@ -4,16 +4,16 @@ if [[ ! "$WORKSPACE" ]]; then
     WORKSPACE="${0%/*}"
 fi
 
-PYENV_HOME = $WORKSPACE/venv/
+PYENV_HOME=$WORKSPACE/venv/
 
 pip install --quiet -r requirements.txt -t $WORKSPACE
 
-touch $WORKSPACE/google/__init__.py
+#touch $WORKSPACE/google/__init__.py
 
 virtualenv --no-site-packages $PYENV_HOME
 . $PYENV_HOME/bin/activate
 
-pip intsall --quiet pylint
+pip install --quiet pylint
 pip install --quiet pytest
 
 pytest --junitxml tests_results.xml
