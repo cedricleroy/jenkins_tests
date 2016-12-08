@@ -10,7 +10,7 @@ pip install --quiet -r requirements.txt -t $WORKSPACE
 
 #touch $WORKSPACE/google/__init__.py
 
-virtualenv --no-site-packages $PYENV_HOME
+virtualenv -p python2.7 $PYENV_HOME
 . $PYENV_HOME/bin/activate
 
 pip install --quiet pylint
