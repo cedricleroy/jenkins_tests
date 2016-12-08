@@ -12,7 +12,7 @@ which python
 
 #touch $WORKSPACE/google/__init__.py
 
-virtualenv -p python2.7 --no-site-packages $PYENV_HOME
+virtualenv --no-site-packages $PYENV_HOME
 . $PYENV_HOME/bin/activate
 
 which python
